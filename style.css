@@ -1,5 +1,6 @@
 body {
-  background: linear-gradient(to left, rgb(187, 154, 93), rgb(99, 99, 218))
+  background-image: url(dakota-corbin-a-AWnRtwlWM-unsplash.jpg);
+  color: white;
 }
 
 button {
@@ -11,6 +12,7 @@ h1 {
 }
 
 h2,
+h3,
 p {
   text-align: center;
 }
@@ -34,6 +36,11 @@ p {
   justify-content: center;
 }
 
+.card:hover {
+  transform: scale(1.2);
+  font-size: 18px;;
+}
+
 .delete,
 #showDialog {
   padding: 10px 40px;
@@ -46,10 +53,24 @@ p {
   transition: 1s;
 }
 
+#showDialog,
+.card {
+  transition: all 0.5s ease-in-out;
+}
+
+#showDialog:hover {
+  transform: scale(1.5);
+}
+
 .toggle {
   margin: auto;
 }
 
 .inputs {
   text-align: center;
+}
+
+#favDialog {
+  position: absolute;
+  top: -640px;
 }

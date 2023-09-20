@@ -80,7 +80,6 @@ const addBookButton = document.querySelector('.add-book');
 addBookButton.addEventListener('click', addBook);
 addBookButton.addEventListener("click", (event) => {
   event.preventDefault(); // We don't want to submit this fake form
-  favDialog.close(selectEl.value); // Have to send the select box value here.
 });
 
 function addBook() {
