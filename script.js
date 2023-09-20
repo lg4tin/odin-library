@@ -25,6 +25,9 @@ addBookToLibrary(harryPotter);
 function displayBooks() {
   for (let book in myLibrary) {
     console.log(myLibrary[book].info());
+    let div = document.createElement('div');
+    div.textContent = myLibrary[book].info();
+    document.body.appendChild(div);
   };
 }
 
