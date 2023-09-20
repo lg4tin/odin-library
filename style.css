@@ -6,13 +6,50 @@ button {
   cursor: pointer;
 }
 
-h2 {
+h1 {
   text-align: center;
 }
 
+h2,
+p {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+}
+
 .card {
-  background-color: beige;
-  width: 300px;
+  background-color: rgb(116, 73, 73);
+  color: white;
+  padding: 0px 20px;
+  width: 250px;
   height: 300px;
-  border-radius: 20px;;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.delete,
+#showDialog {
+  padding: 10px 40px;
+  border-radius: 20px;
+  border: none;
+}
+
+.delete:hover {
+  background-color: rgb(255, 0, 0);
+  transition: 1s;
+}
+
+.toggle {
+  margin: auto;
+}
+
+.inputs {
+  text-align: center;
 }
