@@ -12,6 +12,16 @@ function Book(title, author, pages, read) {
   }
 }
 
+Book.prototype.toggle = function() {
+  if (this.read == 'Read') {
+    this.read = 'Not read';
+  } else {
+    this.read = 'Read'
+  }
+}
+
+const hp = new Book('hp', 'jkr', 400, 'Read')
+
 function addBookToLibrary(book) {
   myLibrary.push(book);
 }
@@ -22,7 +32,7 @@ function displayBooks() {
     //create div card
     let div = document.createElement('div');
     div.classList.add('card');
-    div.textContent = myLibrary[book].info();
+    //div.textContent = myLibrary[book].info();
     //create title
     let h3 = document.createElement('h3');
     h3.textContent = myLibrary[book].title;
@@ -35,6 +45,10 @@ function displayBooks() {
     let pages = document.createElement('p');
     pages.textContent = myLibrary[book].pages;
     div.appendChild(pages);
+    // create read
+    let read = document.createElement('p');
+    read.textContent = myLibrary[book].read;
+    div.appendChild(read);
     //create delete button
     let deleteButton = document.createElement('button');
     deleteButton.textContent = 'Delete';
