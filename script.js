@@ -33,7 +33,16 @@ const addBookButton = document.querySelector('.add-book');
 addBookButton.addEventListener('click', addBook);
 
 function addBook() {
+  if (title.value === '') return;
   addBookToLibrary(new Book(title.value, author.value, pages.value, read.value))
   displayBooks();
+  clearInputs();
+}
+
+function clearInputs() {
+  title.value = '';
+  author.value = '';
+  pages.value = '';
+  read.value = '';
 }
 
