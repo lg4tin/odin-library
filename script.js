@@ -12,13 +12,13 @@ class Book {
   info() {
     return (`The ${title} by ${author}, ${pages} pages, ${read}`)
   }
-}
 
-Book.prototype.toggle = function() {
-  if (this.read == 'read') {
-    this.read = 'not-read';
-  } else if (this.read == 'not-read') {
-    this.read = 'read'
+  toggle() {
+    if (this.read == 'read') {
+      this.read = 'not-read';
+    } else if (this.read == 'not-read') {
+      this.read = 'read'
+    }
   }
 }
 
@@ -75,10 +75,7 @@ function displayBooks() {
   };
 }
 
-//displayBooks();
-
 const addBookButton = document.querySelector('.add-book');
-//addBookButton.addEventListener('click', displayBooks);
 addBookButton.addEventListener('click', addBook);
 addBookButton.addEventListener("click", (event) => {
   event.preventDefault(); // We don't want to submit this fake form
