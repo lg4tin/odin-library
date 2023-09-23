@@ -1,13 +1,15 @@
 const myLibrary = [];
 const container = document.querySelector('.container');
 
-function Book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
-
-  this.info = function() {
+class Book {
+  constructor(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+  }
+  
+  info() {
     return (`The ${title} by ${author}, ${pages} pages, ${read}`)
   }
 }
