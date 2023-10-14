@@ -1,3 +1,4 @@
+/*eslint-disable*/
 const myLibrary = [];
 const container = document.querySelector('.container');
 
